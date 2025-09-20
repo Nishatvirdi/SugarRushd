@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SugarRush’d | Menu!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <aside id="nav_one">
+            <a href="index.html"><img src="./assets/logo_final.png" alt="Logo"></a>
+        </aside>
+        <aside id="nav_two">
+            <a href="about_us.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact_us.html">Contact</a>
+        </aside>
+        <aside id="nav_three">
+            <i class="fa-solid fa-cart-shopping" id="cart_btn"></i>
+            <div id="cart_quantity">0</div>
+            <p id="cart_price">Rs.0.00</p>
+        </aside>
+    </nav>
+
+    <!-- Sidebar Cart -->
+    <aside id="sidebar">
+        <div id="cart_head">
+            <h2>Cart</h2>
+            <i class="fa-solid fa-xmark" id="cross_btn"></i>
+        </div>
+        <hr>
+        <div id="cart_container"></div>
+        <hr>
+        <div id="cart_total"></div>
+        <div id="place_order">
+            <a href="/order_placed.html"><button>Place Order!</button></a>
+        </div>
+    </aside>
+
+    <!-- Menu Filters -->
+    <section id="menu_filter">
+        <h1>Our Menu</h1>
+        <div id="menu_buttons">
+            <button class="active" onclick="filterItems('all')">All</button>
+            <button onclick="filterItems('cakes')">Fresh Cakes</button>
+            <button onclick="filterItems('cupcakes')">Cup Cakes</button>
+            <button onclick="filterItems('croissant')">Croissants</button>
+            <button onclick="filterItems('cookies')">Cookies</button>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section id="menu_items">
+
+        <!-- Cakes -->
+        <div class="card cakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Cake1.webp" alt="Hazelnut Praline Mousse Cake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Hazelnut Praline Mousse Cake</h2>
+                    <p>Rs. 1600</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Cake2.jpg" alt="Eggless Red Velvet Cake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Eggless Red Velvet Cake</h2>
+                    <p>Rs. 1200</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Cake3.webp" alt="Dutch Truffle Cake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Dutch Truffle Cake</h2>
+                    <p>Rs. 2000</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Cake4.webp" alt="Choco-Vanilla Oreo Cake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Choco-Vanilla Oreo Cake</h2>
+                    <p>Rs. 1500</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Cake5.webp" alt="Butterscotch & Milk Chocolate Cake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Butterscotch & Milk Chocolate Cake</h2>
+                    <p>Rs. 2000</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Cake6.webp" alt="Rich Chocolate Cake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Rich Chocolate Cake</h2>
+                    <p>Rs. 1600</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <!-- Cupcakes -->
+        <div class="card cupcakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/cc1.webp" alt="Vanilla & Blueberry Cupcake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Vanilla & Blueberry Cupcake</h2>
+                    <p>Rs. 200</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cupcakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/cc2.webp" alt="Chocolate Cupcake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Chocolate Cupcake</h2>
+                    <p>Rs. 250</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cupcakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/cc3.webp" alt="Red Velvet Cupcake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Red Velvet Cupcake</h2>
+                    <p>Rs. 200</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cupcakes">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/cc4.webp" alt="Strawberry Cupcake"></aside>
+                <aside class="card_one_desc">
+                    <h2>Strawberry Cupcake</h2>
+                    <p>Rs. 150</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <!-- Croissants -->
+        <div class="card croissant">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Croissant1.jpg" alt="Butter Croissant"></aside>
+                <aside class="card_one_desc">
+                    <h2>Butter Croissant</h2>
+                    <p>Rs. 600</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card croissant">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Croissant2.webp" alt="Chocolate Croissant"></aside>
+                <aside class="card_one_desc">
+                    <h2>Chocolate Croissant</h2>
+                    <p>Rs. 700</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card croissant">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/Croissant3.webp" alt="Blueberry Danish"></aside>
+                <aside class="card_one_desc">
+                    <h2>Blueberry Danish</h2>
+                    <p>Rs. 800</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <!-- Cookies -->
+        <div class="card cookies">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/ck1.webp" alt="Butter Cookies"></aside>
+                <aside class="card_one_desc">
+                    <h2>Butter Cookies</h2>
+                    <p>Rs. 400</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cookies">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/ck2.webp" alt="Chocolate Coated Cookies"></aside>
+                <aside class="card_one_desc">
+                    <h2>Chocolate Coated Cookies</h2>
+                    <p>Rs. 550</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cookies">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/ck3.webp" alt="Chocolate Chip Cookies"></aside>
+                <aside class="card_one_desc">
+                    <h2>Chocolate Chip Cookies</h2>
+                    <p>Rs. 600</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+        <div class="card cookies">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/ck4.webp" alt="Double Choco Chip Cookies"></aside>
+                <aside class="card_one_desc">
+                    <h2>Double Choco Chip Cookies</h2>
+                    <p>Rs. 650</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+        <div class="card cookies">
+            <article class="card_one">
+                <aside class="card_one_img"><img src="/assets/ck5.webp" alt="Double Choco Chip Cookies"></aside>
+                <aside class="card_one_desc">
+                    <h2>Cinnamon Swirl Cookies</h2>
+                    <p>Rs. 650</p>
+                </aside>
+            </article>
+            <article class="card_two">
+                <aside class="card_two_quantity">
+                    <button class="reducebtn"><i class="fa-solid fa-minus"></i></button>
+                    <p class="itemquantity">0</p>
+                    <button class="addbtn"><i class="fa-solid fa-plus"></i></button>
+                </aside>
+                <aside class="card_two_add">
+                    <button class="addtocartbtn"><i class="fa-solid fa-cart-plus"></i> Add to Cart</button>
+                </aside>
+            </article>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <h3>🍩 Sugar Rush'd</h3>
+            <p>Where every bite feels like a sweet hug 💕</p>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sugar Rush'd | Made with 🧁 and love by Nishat</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
